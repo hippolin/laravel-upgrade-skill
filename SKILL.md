@@ -18,10 +18,11 @@ This skill guides developers through upgrading a Laravel application from one ma
 
 1. **Identify source and target version** — if not provided, ask the user.
 2. **Load the correct reference file** — see the table below.
-3. **Assess the app** — ask if the user has any relevant packages (Passport, Horizon, etc.) so you can flag their upgrade guides too.
-4. **Walk through changes by impact** — High → Medium → Low. For each change, show the before/after code if applicable.
-5. **Produce a checklist** — a markdown checklist the user can copy and track.
-6. **Verify** — remind the user to run tests, check logs, and clear caches.
+3. **Assess the app** — ask if the user has any relevant packages (Passport, Horizon, Rollbar, etc.) so you can flag their upgrade guides too.
+4. **Walk through changes by impact** — High → Medium → Low. For each change, show the before/after code if applicable. For 8.x → 9.x upgrades, confirm PHP 8.1 is already in place before changing Laravel dependencies.
+5. **Check deployment/build paths** — if the upgrade renames directories or moves framework conventions, verify Dockerfiles and other build-time COPY paths alongside Composer changes.
+6. **Produce a checklist** — a markdown checklist the user can copy and track.
+7. **Verify** — remind the user to run tests, check logs, and clear caches.
 
 ## Reference Files
 
